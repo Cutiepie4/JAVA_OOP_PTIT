@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class XuLiVanBan {
+public class Test {
 	public static String format(String s) {
 		String ans = "";
 		StringTokenizer st = new StringTokenizer(s);
