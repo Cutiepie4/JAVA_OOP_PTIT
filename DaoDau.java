@@ -2,7 +2,7 @@ package studyJavaPTIT;
 
 import java.util.*;
 
-public class DoiDau {
+public class DaoDau {
     static long daoDau(long sum, int[] a, int n, int k) {
         Arrays.sort(a);
         List<Integer> zero = new ArrayList<>(), neg = new ArrayList<>();
