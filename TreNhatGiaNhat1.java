@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 class Person {
 	private String name;
-	private ChronoLocalDate dob;
+	private LocalDate dob;
 
 	public Person(String[] data) {
 		super();
@@ -17,7 +17,7 @@ class Person {
 		dob = LocalDate.parse(data[1], dtf);
 	}
 
-	public ChronoLocalDate getDob() {
+	public LocalDate getDob() {
 		return dob;
 	}
 
@@ -39,10 +39,10 @@ public class TreNhatGiaNhat1 {
 		Person eldest = data.get(0);
 		Person youngest = data.get(0);
 		for (int i = 1; i < data.size(); i++) {
-			if (!eldest.getDob().isBefore(data.get(i).getDob())) {
+			if (eldest.getDob().isAfter(data.get(i).getDob())) {
 				eldest = data.get(i);
 			}
-			if (!youngest.getDob().isAfter(data.get(i).getDob())) {
+			if (youngest.getDob().isBefore(data.get(i).getDob())) {
 				youngest = data.get(i);
 			}
 		}
