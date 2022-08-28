@@ -10,13 +10,6 @@ class Person {
 	private String name;
 	private ChronoLocalDate dob;
 
-	public Person() {
-		super();
-		this.name = "default";
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		this.dob = LocalDate.parse("01/01/1000", dtf);
-	}
-
 	public Person(String[] data) {
 		super();
 		this.name = data[0];
