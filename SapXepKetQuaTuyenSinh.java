@@ -46,12 +46,10 @@ class ThiSinh {
 	}
 
 	public String format(double data) {
-		String s = String.valueOf(data);
-		StringBuilder sb = new StringBuilder(s);
-		while (sb.charAt(sb.length() - 1) == '0' || sb.charAt(sb.length() - 1) == '.') {
-			sb.deleteCharAt(sb.length() - 1);
+		if (data == (int) data) {
+			return String.valueOf((int) data);
 		}
-		return sb.toString();
+		return String.valueOf(data);
 	}
 
 	@Override
@@ -66,10 +64,12 @@ public class SapXepKetQuaTuyenSinh {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		ArrayList<ThiSinh> data = new ArrayList<ThiSinh>();
+
 		while (n-- > 0) {
 			sc.nextLine();
 			data.add(new ThiSinh(sc.nextLine(), sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble()));
 		}
+
 		Collections.sort(data, new Comparator<ThiSinh>() {
 
 			@Override

@@ -36,12 +36,10 @@ class ThiSinh {
 	}
 	
 	public String format(double data) {
-		String s = String.valueOf(data);
-		StringBuilder sb = new StringBuilder(s);
-		while (sb.charAt(sb.length() - 1) == '0' || sb.charAt(sb.length() - 1) == '.') {
-			sb.deleteCharAt(sb.length() - 1);
+		if (data == (int) data) {
+			return String.valueOf((int) data);
 		}
-		return sb.toString();
+		return String.valueOf(data);
 	}
 
 	@Override
