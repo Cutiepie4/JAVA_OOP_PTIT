@@ -1,1 +1,1 @@
-# Welcome to my repo, have a nice day!
+# Have a nice day!
